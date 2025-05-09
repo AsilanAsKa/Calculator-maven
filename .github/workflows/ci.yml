@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Репозиторийг татах
+      - name: Репозиторыг татах
         uses: actions/checkout@v4
 
       - name: JDK 17 тохируулах
@@ -26,9 +26,12 @@ jobs:
 
       - name: Checkstyle шалгах
         run: mvn checkstyle:check
+        working-directory: calculator
 
-      - name: JUnit тест ба JaCoCo шалгах
+      - name: JUnit тест ба JaCoCo coverage шалгах
         run: mvn test jacoco:check
+        working-directory: calculator
 
       - name: JaCoCo тайлан үүсгэх
         run: mvn jacoco:report
+        working-directory: calculator
