@@ -1,0 +1,54 @@
+# Maven build directory
+/target/
+
+# Eclipse/IntelliJ project files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (хэрвээ VS Code ашиглаж байвал)
+.vscode/
+
+# Checkstyle/JaCoCo гэх мэт тайлангийн файл
+checkstyle-result.xml
+jacoco.exec
+
+# Temporary/backup files
+*.bak
+*~
+# Maven build directory
+/target/
+
+# Eclipse/IntelliJ project files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (хэрвээ VS Code ашиглаж байвал)
+.vscode/
+
+# Checkstyle/JaCoCo гэх мэт тайлангийн файл
+checkstyle-result.xml
+jacoco.exec
+
+# Temporary/backup files
+*.bak
+*~
