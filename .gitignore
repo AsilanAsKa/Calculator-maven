@@ -1,0 +1,43 @@
+# Maven output
+/target/
+
+# Compiled class files
+*.class
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build tools
+/build/
+out/
+
+# Coverage
+jacoco.exec
+
+# Temporary files
+*.tmp
+*.swp
+
+# Node/npm (хэрвээ frontend холбогдсон бол)
+node_modules/
+
+# GitHub Actions cache (optionally)
+/.github/workflows/*.bak
