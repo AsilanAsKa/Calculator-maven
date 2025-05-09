@@ -2,35 +2,31 @@ name: CI Процесс
 
 on:
   push:
-    branches:
-      - develop
-      - release/*
+    branches: [ develop, release/* ]
   pull_request:
-    branches:
-      - develop
-      - release/*
+    branches: [ develop, release/* ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: calculator  # ← энд зөв repo хавтас заавал заана
 
     steps:
-      - uses: actions/checkout@v4
+    - name: Кодыг татах
+      uses: actions/checkout@v4
 
-      - name: JDK 17 Тохируулах
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+    - name: JDK 17 тохируулах
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
 
-      - name: Checkstyle Шалгах
-        run: mvn checkstyle:check
+    - name: Checkstyle шалгах
+      run: mvn checkstyle:check
 
-      - name: JUnit Тест ба JaCoCo Coverage Шалгах
-        run: mvn test jacoco:check
+    - name: JUnit тест ба JaCoCo шалгах
+      run: mvn test jacoco:check
 
-      - name: JaCoCo Тайлан Үүсгэх
-        run: mvn jacoco:report
+    - name: JaCoCo тайлан үүсгэх
+      run: mvn jacoco:report
+
+      
